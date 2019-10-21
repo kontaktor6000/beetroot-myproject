@@ -4,6 +4,11 @@ $secondName = 'Vasilenko';
 $age = 47;
 $login = 'serhio';
 $password = 'password';
+$languages = [
+  'en' => 'English',
+  'ru' => 'Русский',
+  'ua' => 'Украинский'
+];
 
 
 ?>
@@ -31,5 +36,12 @@ $password = 'password';
     <input type="password" name="password" value="<?=$password?>"><br>
     <input type="submit" value="Отправить данные">
 </form>
+
+<h2>Выберите язык:</h2>
+<select name="lang" id="lang">
+    <?php foreach ($languages as $key => $value): ?>
+        <option value="<?= $key; ?>>"><?= $value; ?></option>
+    <?php endforeach; ?>
+</select>
 </body>
 </html>
