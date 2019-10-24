@@ -1,48 +1,17 @@
 <?php
- $university = [
-    'technologyFaculty' => [
-        'nameFaculty' => 'Технологический факультет',
-        'dateCreate' => '1960',
-        'technologyFirstGroup' => [
-            [
-                'dateCreate' => '2015',
-                'nameGroup' => 'Первая технологическая группа',
+error_reporting(E_ALL);
 
-            ],
-            [
-                'Pupkin Vasiliy' => [
-                    'birthday' => '2001',
+$users = [];
 
-                ]
-            ]
-        ],
-        'technologySecondGroup' => [
+$users['1'] = ["name" => "Andrey", "email" => "andrey@andrey.com"];
+$users['3'] = ["name" => "Anton", "email" => "anton@anton.com"];
+$users['23'] = ["name" => "Yakov", "email" => "yakov@yakov.com"];
+$users['12'] = ["name" => "Boris", "email" => "boris@boris.com"];
+$users['15'] = ["name" => "Tolyan", "email" => "tolyan@tolyan.com"];
+$users['6'] = ["name" => "Prohor", "email" => "prohor@prohor.com"];
+$users['8'] = ["name" => "Nikolya", "email" => "nikolya@nikolya.com"];
 
-        ],
-    ],
-    'mechanicFaculty' => [
-        'nameFaculty' => 'Механический факультет',
-        'dateCreate' => '1962',
-        'mechanicFirstGroup' => [
 
-        ],
-        'mechanicSecondGroup' => [
-
-        ],
-    ],
-    'loafersFaculty' => [
-        'nameFaculty' => 'Эксперементальный лежебочный факультет',
-        'dateCreate' => '2018',
-        'loafersGroup' => [
-            'onItsSide' =>  [
-
-            ],
-            'onTheBack' => [
-
-            ],
-        ],
-        'smockingBambooGroup' => [
-
-        ]
-    ]
- ];
+foreach ($users as $idArray => $user) {
+    $users[$idArray]['id'] = $idArray;
+}
